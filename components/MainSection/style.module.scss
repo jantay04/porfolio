@@ -1,0 +1,15 @@
+.cssSelector {
+    animation: animateBg 20s linear infinite;
+    background-image: linear-gradient(0deg, #d062627d, #c19b4a7e, #ddf2a089, #c5ee4a87, #42eca581, #64b4d985, #208ea27e, #498ada8e, #5b73df8b, #897ed395, #cf5c5c8c, #c19b4a89);
+    background-size: 100% 1100%;
+}
+
+@keyframes animateBg {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
