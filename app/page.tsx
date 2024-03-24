@@ -1,19 +1,26 @@
-import About from '../components/About'
-import Contacts from '../components/Contacts'
-import Experience from '../components/Experience'
-import MainLayout from '../components/Layout/MainLayout'
-import MainSection from '../components/MainSection'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
+"use client"
+
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import MainLayout from "@/components/Layout/MainLayout";
+import MainSection from "@/components/MainSection";
+import { ThemeProvider } from "@emotion/react";
+import { createTheme } from "@mui/material";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Inter } from 'next/font/google'
-// import { Inter } from '@next/font/google'
+import { Inter } from "next/font/google";
+import Projects from "./projects";
+import { Contacts } from "@mui/icons-material";
 
 const inter = Inter({ subsets: ['latin'] })
 
 const theme = createTheme({
   palette: {
+    // primary: {
+    //   light: '#757ce8',
+    //   main: '#3f50b5',
+    //   dark: '#002884',
+    //   contrastText: '#fff',
+    // },
     secondary: {
       light: 'black',
       main: 'black',
@@ -33,19 +40,10 @@ export default function Home() {
 
   return (
     <ThemeProvider theme={theme}>
-      <motion.div style={{
-        scaleX: scaleX,
-        transformOrigin: "left",
-        background: "black",
-        position: "sticky",
-        top: '0',
-        width: '100%',
-        height: '6px'
-      }} />
       <MainLayout>
         <MainSection />
         <About />
-        <Skills />
+        {/* <Skills /> */}
         <Experience />
         <Projects />
         <Contacts />
